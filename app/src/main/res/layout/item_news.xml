@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    card_view:cardElevation="15dp"
+    card_view:cardCornerRadius="5dp"
+
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="16dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        card_view:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <TextView
+        android:id="@+id/descriptionn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"
+        card_view:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        card_view:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        android:textSize="16sp"
+        card_view:layout_constraintTop_toBottomOf="@id/descriptionn"/>
+
+    <TextView
+        android:id="@+id/publishAt"
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/author"/>
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:text="@string/top_headlines_of_science"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/publishAt"/>
+
+    <TextView
+
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        android:textSize="16sp"
+        android:text="@string/tap_to_read_more"
+        android:background="@color/gray"
+        android:textColor="@color/white"
+        card_view:layout_constraintTop_toBottomOf="@id/topic"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
